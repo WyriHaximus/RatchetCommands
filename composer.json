@@ -1,0 +1,27 @@
+{
+  "name": "WyriHaximus/RatchetCommands",
+  "version": "0.0.1",
+  "description": "No description",
+  "type": "cakephp-plugin",
+  "keywords": [
+    "cakephp"
+  ],
+  "homepage": "http://github.com/WyriHaximus/RatchetCommands",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Cees-Jan kiewiet",
+      "role": "Maintainer"
+    },
+  ],
+  "require": {
+    "composer/installers": "*"
+  },
+  "support": {
+    "issues": "https://github.com/WyriHaximus/RatchetCommands/issues",
+    "source": "https://github.com/WyriHaximus/RatchetCommands"
+  },
+  "extra": {
+    "installer-name": "RatchetCommands"
+  }
+}
