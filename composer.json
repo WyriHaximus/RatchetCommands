@@ -1,7 +1,7 @@
 {
-  "name": "WyriHaximus/RatchetCommands",
-  "version": "0.0.1",
-  "description": "No description",
+  "name": "wyrihaximus/ratchet-commands",
+  "version": "0.1.0-DEV",
+  "description": "Brings 2 way communication to wyrihaximus/ratchet.",
   "type": "cakephp-plugin",
   "keywords": [
     "cakephp"
@@ -11,11 +11,19 @@
   "authors": [
     {
       "name": "Cees-Jan kiewiet",
-      "role": "Maintainer"
-    },
+      "email": "ceesjank@gmail.com",
+      "role": "Maintainer",
+      "homepage": "http://wyrihaximus.net/"
+    }
   ],
   "require": {
-    "composer/installers": "*"
+      "composer/installers": "*",
+      "wyrihaximus/ratchet": "*"
+  },
+  "suggest": {
+      "predis/predis": "0.8.*",
+      "predis/predis-async": "dev-master",
+      "react/zmq": "0.1.*"
   },
   "support": {
     "issues": "https://github.com/WyriHaximus/RatchetCommands/issues",
