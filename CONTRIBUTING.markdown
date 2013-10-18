@@ -4,7 +4,7 @@ RatchetCommands loves to welcome your contributions. There are several ways to h
 * Create a ticket in GitHub, if you have found a bug
 * Write testcases for open bug tickets
 * Write patches for open bug/feature tickets, preferably with testcases included
-* Contribute to the [documentation](https://github.com/WyriHaximus/RatchetCommands/tree/gh-pages)
+* Contribute to the [documentation](https://github.com/WyriHaximus/RatchetCommands/tree/master/docs)
 
 There are a few guidelines that we need contributors to follow so that we have a
 chance of keeping on top of things.
