@@ -9,6 +9,7 @@
  * file that was distributed with this source code.
  */
 
+App::uses('AbstractTransportTest', 'RatchetCommands.Test/Case/Lib/MessageQueue/Transports');
 App::uses('PredisTransport', 'RatchetCommands.Lib/MessageQueue/Transports');
 
 class PredisTranportTest extends AbstractTransportTest {
