@@ -10,7 +10,7 @@
  */
 
 App::uses('RatchetMessageQueueKillSwitchCommand', 'RatchetCommands.Lib/MessageQueue/Command');
-App::uses('AbstractCommandTest', 'Ratchet.Test/Case/Lib/MessageQueue/Command');
+App::uses('AbstractCommandTest', 'RatchetCommands.Test/Case/Lib/MessageQueue/Command');
 
 class RatchetMessageQueueKillSwitchCommandTestShell {
 
