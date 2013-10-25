@@ -25,7 +25,7 @@ abstract class AbstractTransportTest extends CakeTestCase {
 		));
 		CakePlugin::load('TestRatchetCommands');
 
-		$this->loop = React\EventLoop\Factory::create();
+		$this->loop = \React\EventLoop\Factory::create();
 
 		$event = new CakeEvent('Rachet.WampServer.construct', $this, array(
 			'loop' => $this->loop,
