@@ -20,6 +20,10 @@
       "composer/installers": "*",
       "wyrihaximus/ratchet": "dev-master"
   },
+  "require-dev": {
+    "predis/predis": "0.8.*",
+    "wyrihaximus/ratchet": "dev-master"
+  },
   "suggest": {
       "predis/predis": "0.8.*",
       "predis/predis-async": "dev-master",
