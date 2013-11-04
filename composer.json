@@ -31,5 +31,8 @@
   },
   "extra": {
     "installer-name": "RatchetCommands"
+  },
+  "config": {
+    "vendor-dir": "Vendor"
   }
 }
