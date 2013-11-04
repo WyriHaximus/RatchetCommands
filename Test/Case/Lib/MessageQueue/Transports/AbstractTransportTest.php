@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-App::uses('RatchetMessageQueueDummyCommand', 'TestRatchet.Lib/MessageQueue/Command');
+App::uses('RatchetMessageQueueDummyCommand', 'TestRatchetCommands.Lib/MessageQueue/Command');
 
 abstract class AbstractTransportTest extends CakeTestCase {
 
