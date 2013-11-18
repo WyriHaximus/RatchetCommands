@@ -24,5 +24,5 @@ Configure::write('RatchetCommands', array(
 
 App::uses('CakeEventManager', 'Event');
 
-App::uses('RatchetQueueCommandZmqListener', 'Ratchet.Event/Queue');
+App::uses('RatchetQueueCommandZmqListener', 'RatchetCommands.Event/Queue');
 CakeEventManager::instance()->attach(new RatchetQueueCommandZmqListener());

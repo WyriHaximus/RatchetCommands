@@ -9,8 +9,8 @@
  * file that was distributed with this source code.
  */
 
-App::uses('RatchetQueueCommandListener', 'Ratchet.Event/Queue');
-App::uses('RatchetMessageQueueModelUpdateCommand', 'Ratchet.Lib/MessageQueue');
+App::uses('RatchetQueueCommandListener', 'RatchetCommands.Event/Queue');
+App::uses('RatchetMessageQueueModelUpdateCommand', 'RatchetCommands.Lib/MessageQueue');
 
 class RatchetQueueCommandZmqListener extends RatchetQueueCommandListener {
 
