@@ -13,6 +13,7 @@ env:
   global:
     - REPO_NAME=RatchetCommands
     - PLUGIN_NAME=RatchetCommands
+    - COMPOSER_VENDOR=Vendor
     - REQUIRE=""
 
   matrix:
