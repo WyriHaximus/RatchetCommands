@@ -7,5 +7,88 @@ RatchetCommands
 [![Coverage Status](https://coveralls.io/repos/WyriHaximus/RatchetCommands/badge.png)](https://coveralls.io/r/WyriHaximus/RatchetCommands)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/WyriHaximus/ratchetcommands/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
-RatchetCommands
+RatchetCommands lets your application communicate messages to the Ratchet server instance.
 
+## Getting started ##
+
+#### 1. Requirements ####
+
+This plugin depends on the following plugin and libraries and are pulled in by composer later on:
+
+- [Ratchet](https://github.com/WyriHaximus/Ratchet)
+
+#### 2. Composer ####
+
+Make sure you have [composer](http://getcomposer.org/) installed and configured with the autoloader registering during bootstrap as described [here](http://ceeram.github.io/blog/2013/02/22/using-composer-with-cakephp-2-dot-x/). Make sure you have a composer.json and add the following to your required section.
+
+```json
+"wyrihaximus/ratchet-commands": "dev-master"
+```
+
+When you've set everything up, run `composer install`.
+
+#### 3. Setup the plugin ####
+
+Make sure you load `RatchetCommands` in your bootstrap and the `Ratchet` plugin is setup properly.
+
+#### 4. Building a command ####
+
+Filename: `Lib/MessageQueue/Command/BroadcastCommand.php`
+
+```php
+class BroadcastCommand extends RatchetMessageQueueCommand {
+
+	public function serialize() {
+		return serialize(array(
+			'data' => $this->data,
+		));
+	}
+
+	public function unserialize($commandString) {
+		$commandString = unserialize($commandString);
+		$this->setData($commandString['data']);
+	}
+
+	public function setData($data) {
+		$this->data = $data;
+	}
+
+	public function getData() {
+		return $this->data;
+	}
+
+	// Send a broadcast on the channel `channel` with the data sent with the command
+	// (This runs in the Ratchet instance.)
+	public function execute($eventSubject) {
+		$topics = $eventSubject->getTopics();
+		if (isset($topics['channel'])) {
+			$topics['channel']->broadcast($this->getData());
+		}
+
+		return true;
+	}
+
+	// Handle the response
+	// (This runs in the application.)
+	public function response($response) {
+		if ($response) {
+			// Handle success
+		} else {
+			// Handle failure
+		}
+	}
+}
+```
+
+Besure to App::uses the command in your bootstrap so the Ratchet instance knows where to load it from.
+
+#### 5. Sending the message ####
+
+```php
+App::uses('TransportProxy', 'RatchetCommands.Lib/MessageQueue/Transports');
+$command = new BroadcastCommand();
+$command->setData([
+	'time' => time(),
+]);
+TransportProxy::instance()->queueMessage($command);
+```
