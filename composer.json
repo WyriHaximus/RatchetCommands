@@ -25,9 +25,9 @@
     "wyrihaximus/ratchet": "dev-master"
   },
   "suggest": {
-      "predis/predis": "0.8.*",
-      "predis/predis-async": "dev-master",
-      "react/zmq": "0.1.*"
+      "predis/predis": "Send commands to the Ratchet service over redis",
+      "predis/predis-async": "Send commands to the Ratchet service over redis",
+      "react/zmq": "Send commands to the Ratchet service over 0MQ"
   },
   "support": {
     "issues": "https://github.com/WyriHaximus/RatchetCommands/issues",
