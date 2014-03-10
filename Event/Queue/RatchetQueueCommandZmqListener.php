@@ -26,8 +26,8 @@ class RatchetQueueCommandZmqListener extends RatchetQueueCommandListener {
 		$context = new \React\ZMQ\Context($this->_loop);
 		$socket = $context->getSocket(ZMQ::SOCKET_REP);
 		$socket->bind(Configure::read('RatchetCommands.Queue.configuration.server'));
-		$socket->on('message', function($msg) use ($event, $socket) {
-			$command = unserialize($msg);
+		$socket->on('message', function($message) use ($event, $socket) {
+			$command = unserialize($message);
 			$socket->send(serialize($command->execute($event->subject())));
 		});
 	}
