@@ -27,7 +27,8 @@
   "suggest": {
       "predis/predis": "Send commands to the Ratchet service over redis",
       "predis/predis-async": "Send commands to the Ratchet service over redis",
-      "react/zmq": "Send commands to the Ratchet service over 0MQ"
+      "react/zmq": "Send commands to the Ratchet service over 0MQ",
+      "dnode/dnode": "Send commands to the Ratchet service over simple pure PHP sockets"
   },
   "support": {
     "issues": "https://github.com/WyriHaximus/RatchetCommands/issues",
