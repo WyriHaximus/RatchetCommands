@@ -10,3 +10,16 @@ The `ZMQTransport` uses [0MQ](http://zeromq.org/) to send messages to the Ratche
 ## Configuration ##
 
 Configuration 0MQ as a transport is simple, first `RatchetCommands.Queue.transporter` has  to be `RatchetCommands.ZMQTransport` and second `RatchetCommands.Queue.configuration.server` has  to be `tcp://127.0.0.1:13001`. (Where `127.0.0.1` is the IP to listen on and `13001` the  port.) In cause of a multi server setup be sure to configure the network correctly so this IP and port can be reached.
+
+``php
+<?php
+
+Configure::write('RatchetCommands', [
+	'Queue' => [
+		'transporter' => 'RatchetCommands.ZMQTransport',
+		'configuration' => [
+			'server' => 'tcp://127.0.0.1:13001',
+		],
+	],
+]);
+```

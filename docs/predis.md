@@ -10,3 +10,16 @@ Predis requires an extra PHP extension to work, details to install it can be fou
 ## Configuration ##
 
 Configuration `Predis` as a transport is simple, first `RatchetCommands.Queue.transporter` has  to be `RatchetCommands.PredisTransport` and second `RatchetCommands.Queue.configuration.server` has  to be any config compatible with [new \Predis\Client](https://github.com/nrk/predis/wiki/Connection-Parameters).
+
+```php
+<?php
+
+Configure::write('RatchetCommands', [
+	'Queue' => [
+		'transporter' => 'RatchetCommands.PredisTransport',
+		'configuration' => [
+			'server' => 'tcp://127.0.0.1:6379?database=15',
+		],
+	],
+]);
+```
