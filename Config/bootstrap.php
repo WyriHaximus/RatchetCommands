@@ -13,14 +13,14 @@
 /**
  * Configuration
  */
-Configure::write('RatchetCommands', array(
-	'Queue' => array(
-		'transporter' => 'RatchetCommands.ZMQTransport',
-		'configuration' => array(
-			'server' => 'tcp://127.0.0.1:13001',
-		),
-	),
-));
+Configure::write('RatchetCommands', [
+    'Queue' => [
+        'transporter' => 'RatchetCommands.ZMQTransport',
+        'configuration' => [
+            'server' => 'tcp://127.0.0.1:13001',
+        ],
+    ],
+]);
 
 App::uses('CakeEventManager', 'Event');
 
