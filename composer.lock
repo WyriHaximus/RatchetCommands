@@ -3,33 +3,33 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "a9996dc023424b86b626cf5478de2160",
+    "hash": "6f8c81d133b144c894748690e4b8ff88",
     "packages": [
         {
             "name": "cboden/ratchet",
-            "version": "v0.2.8",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cboden/Ratchet.git",
-                "reference": "ebd17c6675b51044e711a1089b1534fd8c68c9e0"
+                "reference": "d756e0b507a5f3cdbf8c59dbb7baf68574dc7d58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cboden/Ratchet/zipball/ebd17c6675b51044e711a1089b1534fd8c68c9e0",
-                "reference": "ebd17c6675b51044e711a1089b1534fd8c68c9e0",
+                "url": "https://api.github.com/repos/cboden/Ratchet/zipball/d756e0b507a5f3cdbf8c59dbb7baf68574dc7d58",
+                "reference": "d756e0b507a5f3cdbf8c59dbb7baf68574dc7d58",
                 "shasum": ""
             },
             "require": {
                 "guzzle/http": ">=3.6.0,<3.8.0-dev",
-                "php": ">=5.3.3",
-                "react/socket": ">=0.2.0,<0.4.0-dev",
-                "symfony/http-foundation": "~2.1"
+                "php": ">=5.3.9",
+                "react/socket": "0.3.*",
+                "symfony/http-foundation": "~2.2",
+                "symfony/routing": "~2.2"
             },
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "Ratchet": "src",
-                    "Ratchet\\Tests": "tests"
+                    "Ratchet": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -52,20 +52,20 @@
                 "server",
                 "sockets"
             ],
-            "time": "2013-09-20 00:55:12"
+            "time": "2013-10-14 14:38:12"
         },
         {
             "name": "composer/installers",
-            "version": "v1.0.6",
+            "version": "v1.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "b3bd071ea114a57212c75aa6a2eef5cfe0cc798f"
+                "reference": "26d37e307f9aa6e2e81806a6525666f8ab5ba0ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/b3bd071ea114a57212c75aa6a2eef5cfe0cc798f",
-                "reference": "b3bd071ea114a57212c75aa6a2eef5cfe0cc798f",
+                "url": "https://api.github.com/repos/composer/installers/zipball/26d37e307f9aa6e2e81806a6525666f8ab5ba0ff",
+                "reference": "26d37e307f9aa6e2e81806a6525666f8ab5ba0ff",
                 "shasum": ""
             },
             "replace": {
@@ -102,30 +102,41 @@
             "description": "A multi-framework Composer library installer",
             "homepage": "http://composer.github.com/installers/",
             "keywords": [
-                "TYPO3 CMS",
-                "TYPO3 Flow",
-                "TYPO3 Neos",
+                "Craft",
+                "Hurad",
+                "MODX Evo",
+                "OXID",
+                "WolfCMS",
                 "agl",
+                "annotatecms",
                 "cakephp",
                 "codeigniter",
+                "concrete5",
+                "croogo",
                 "drupal",
+                "elgg",
                 "fuelphp",
                 "installer",
                 "joomla",
                 "kohana",
                 "laravel",
-                "li3",
                 "lithium",
+                "magento",
                 "mako",
+                "mediawiki",
                 "modulework",
                 "phpbb",
+                "piwik",
                 "ppi",
+                "shopware",
                 "silverstripe",
                 "symfony",
+                "typo3",
                 "wordpress",
-                "zend"
+                "zend",
+                "zikula"
             ],
-            "time": "2013-08-20 04:37:09"
+            "time": "2014-04-09 16:12:43"
         },
         {
             "name": "evenement/evenement",
@@ -366,48 +377,6 @@
             "time": "2013-07-30 22:07:23"
         },
         {
-            "name": "markstory/asset_compress",
-            "version": "v0.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/markstory/asset_compress.git",
-                "reference": "c8f32338cd733fadc9c721f039888642950fa334"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/markstory/asset_compress/zipball/c8f32338cd733fadc9c721f039888642950fa334",
-                "reference": "c8f32338cd733fadc9c721f039888642950fa334",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "*",
-                "php": ">=5.3.0"
-            },
-            "type": "cakephp-plugin",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mark Story",
-                    "homepage": "http://mark-story.com",
-                    "role": "Author"
-                }
-            ],
-            "description": "An asset compression plugin for CakePHP. Provides file concatenation and a flexible filter system for preprocessing and minification.",
-            "homepage": "https://github.com/markstory/asset_compress",
-            "keywords": [
-                "assets",
-                "cakephp",
-                "coffee-script",
-                "less",
-                "minifier",
-                "sass"
-            ],
-            "time": "2013-08-25 16:18:47"
-        },
-        {
             "name": "react/event-loop",
             "version": "v0.3.3",
             "target-dir": "React/EventLoop",
@@ -449,6 +418,52 @@
                 "event-loop"
             ],
             "time": "2013-07-08 22:38:22"
+        },
+        {
+            "name": "react/promise",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/promise.git",
+                "reference": "58129a9cb9da88f2055309a805e2696b06928bb0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/58129a9cb9da88f2055309a805e2696b06928bb0",
+                "reference": "58129a9cb9da88f2055309a805e2696b06928bb0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "React\\Promise": "src/"
+                },
+                "files": [
+                    "src/React/Promise/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@googlemail.com",
+                    "homepage": "http://sorgalla.com",
+                    "role": "maintainer"
+                }
+            ],
+            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
+            "time": "2013-12-10 15:40:36"
         },
         {
             "name": "react/socket",
@@ -539,17 +554,17 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.3.6",
+            "version": "v2.4.4",
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "7fc72a7a346a1887d3968cc1ce5642a15cd182e9"
+                "reference": "e539602e5455aa086c0e81e604745af7789e4d8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/7fc72a7a346a1887d3968cc1ce5642a15cd182e9",
-                "reference": "7fc72a7a346a1887d3968cc1ce5642a15cd182e9",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/e539602e5455aa086c0e81e604745af7789e4d8a",
+                "reference": "e539602e5455aa086c0e81e604745af7789e4d8a",
                 "shasum": ""
             },
             "require": {
@@ -565,7 +580,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -580,7 +595,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 },
                 {
                     "name": "Symfony Community",
@@ -589,30 +606,33 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2013-09-19 09:45:20"
+            "time": "2014-04-16 10:34:31"
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v2.3.6",
+            "version": "v2.4.4",
             "target-dir": "Symfony/Component/HttpFoundation",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "59e712338cd05463ebcb8da6422a01b1291871e3"
+                "reference": "22c4dee84271ad0cd08d19f26d89f2878e11159b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/59e712338cd05463ebcb8da6422a01b1291871e3",
-                "reference": "59e712338cd05463ebcb8da6422a01b1291871e3",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/22c4dee84271ad0cd08d19f26d89f2878e11159b",
+                "reference": "22c4dee84271ad0cd08d19f26d89f2878e11159b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
+            "require-dev": {
+                "symfony/expression-language": "~2.4"
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -630,7 +650,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 },
                 {
                     "name": "Symfony Community",
@@ -639,7 +661,75 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
-            "time": "2013-09-29 19:41:41"
+            "time": "2014-04-18 21:02:05"
+        },
+        {
+            "name": "symfony/routing",
+            "version": "v2.4.4",
+            "target-dir": "Symfony/Component/Routing",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Routing.git",
+                "reference": "74229f66e16bce6d2415ca44d4756f8e7ea880f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Routing/zipball/74229f66e16bce6d2415ca44d4756f8e7ea880f8",
+                "reference": "74229f66e16bce6d2415ca44d4756f8e7ea880f8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "doctrine/annotations": "~1.0",
+                "psr/log": "~1.0",
+                "symfony/config": "~2.2",
+                "symfony/expression-language": "~2.4",
+                "symfony/yaml": "~2.0"
+            },
+            "suggest": {
+                "doctrine/annotations": "For using the annotation loader",
+                "symfony/config": "For using the all-in-one router or any loader",
+                "symfony/expression-language": "For using expression matching",
+                "symfony/yaml": "For using the YAML loader"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Routing\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Routing Component",
+            "homepage": "http://symfony.com",
+            "keywords": [
+                "router",
+                "routing",
+                "uri",
+                "url"
+            ],
+            "time": "2014-04-23 14:04:21"
         },
         {
             "name": "wyrihaximus/ratchet",
@@ -647,19 +737,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/Ratchet.git",
-                "reference": "3147c5f42ebca8ec73fac20381a5851ae2aeb569"
+                "reference": "215039b3a07f34b28f9986ab90080fb3edf7a03b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/Ratchet/zipball/3147c5f42ebca8ec73fac20381a5851ae2aeb569",
-                "reference": "3147c5f42ebca8ec73fac20381a5851ae2aeb569",
+                "url": "https://api.github.com/repos/WyriHaximus/Ratchet/zipball/215039b3a07f34b28f9986ab90080fb3edf7a03b",
+                "reference": "215039b3a07f34b28f9986ab90080fb3edf7a03b",
                 "shasum": ""
             },
             "require": {
-                "cboden/ratchet": "0.2.*",
+                "cboden/ratchet": "0.3.*",
                 "composer/installers": "*",
-                "markstory/asset_compress": "v0.9",
-                "php": ">=5.3.3"
+                "php": ">=5.4.0",
+                "react/promise": "~2.0"
             },
             "type": "cakephp-plugin",
             "notification-url": "https://packagist.org/downloads/",
@@ -681,11 +771,57 @@
                 "WebSockets",
                 "cakephp"
             ],
-            "time": "2013-10-23 19:46:29"
+            "time": "2014-05-17 18:23:00"
         }
     ],
     "packages-dev": [
-
+        {
+            "name": "predis/predis",
+            "version": "v0.8.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nrk/predis.git",
+                "reference": "5f2eea628eb465d866ad2771927d83769c8f956c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/5f2eea628eb465d866ad2771927d83769c8f956c",
+                "reference": "5f2eea628eb465d866ad2771927d83769c8f956c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "suggest": {
+                "ext-curl": "Allows access to Webdis when paired with phpiredis",
+                "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Predis": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniele Alessandri",
+                    "email": "suppakilla@gmail.com",
+                    "homepage": "http://clorophilla.net"
+                }
+            ],
+            "description": "Flexible and feature-complete PHP client library for Redis",
+            "homepage": "http://github.com/nrk/predis",
+            "keywords": [
+                "nosql",
+                "predis",
+                "redis"
+            ],
+            "time": "2014-01-16 14:10:29"
+        }
     ],
     "aliases": [
 
@@ -694,9 +830,9 @@
     "stability-flags": {
         "wyrihaximus/ratchet": 20
     },
-    "platform": [
-
-    ],
+    "platform": {
+        "php": ">=5.4.0"
+    },
     "platform-dev": [
 
     ]
