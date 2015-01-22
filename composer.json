@@ -1,6 +1,5 @@
 {
   "name": "wyrihaximus/ratchet-commands",
-  "version": "0.1.0-DEV",
   "description": "Brings 2 way communication to wyrihaximus/ratchet.",
   "type": "cakephp-plugin",
   "keywords": [
@@ -19,11 +18,10 @@
   "require": {
       "php": ">=5.4.0",
       "composer/installers": "*",
-      "wyrihaximus/ratchet": "dev-master"
+      "wyrihaximus/ratchet": "^0.1"
   },
   "require-dev": {
-    "predis/predis": "0.8.*",
-    "wyrihaximus/ratchet": "dev-master"
+    "predis/predis": "0.8.*"
   },
   "suggest": {
       "predis/predis": "Send commands to the Ratchet service over redis",
